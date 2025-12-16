@@ -1,2 +1,5 @@
   app:
     name: Audition
+  api:
+    host:
+      baseurl: "https://jsonplaceholder.typicode.com/"
