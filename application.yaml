@@ -5,7 +5,7 @@
       baseurl: "https://jsonplaceholder.typicode.com/"
 
   #Log properties
-   logging:
+  logging:
     level:
       com:
         audition: "DEBUG"
