@@ -3,3 +3,9 @@
   api:
     host:
       baseurl: "https://jsonplaceholder.typicode.com/"
+
+  #Log properties
+   logging:
+    level:
+      com:
+        audition: "DEBUG"
