@@ -5,10 +5,32 @@
       user:
         name: admin
         password: "{bcrypt}$2a$10$bgUqwP19c/adqHPzC17KWeiqIgjrzA33QAzBC9u/cghh8YH.FrDsu"
+    main:
+      allow-bean-definition-overriding: true
+    autoconfigure:
+      exclude:
+        - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+    mvc:
+      throw-exception-if-no-handler-found: true
+    sleuth:
+      sampler:
+        probability: 1.0    
   api:
     host:
       baseurl: "https://jsonplaceholder.typicode.com/"
-
+  server:
+    max-http-request-header-size: 16KB
+  management:
+    tracing:
+      sampling:
+        probability: 1.0
+    endpoints:
+      web:
+        exposure:
+          include: '*'
+  logging:
+    pattern:
+      level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
   #Log properties
   logging:
     level:
