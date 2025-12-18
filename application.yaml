@@ -1,6 +1,10 @@
   spring:
     application:
       name: Audition
+    security:
+      user:
+        name: admin
+        password: "{bcrypt}$2a$10$bgUqwP19c/adqHPzC17KWeiqIgjrzA33QAzBC9u/cghh8YH.FrDsu"
   api:
     host:
       baseurl: "https://jsonplaceholder.typicode.com/"
